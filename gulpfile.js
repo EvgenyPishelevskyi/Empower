@@ -26,15 +26,8 @@ let fonter = require('gulp-fonter');
 let ttf2woff = require('gulp-ttf2woff');
 let ttf2woff2 = require('gulp-ttf2woff2');
 
-let project_name = require("path").basename(__dirname);
+let project_name = ('test');
 let src_folder = "#src";
-
-gulp.task('deploy', function() {
-	return gulp.src('./build/**/*')
-	  .pipe(ghPages());
- });
-
- let ghPages = require('gulp-gh-pages');
 
 
 let path = {
