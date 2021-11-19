@@ -9,10 +9,10 @@
 
  $("document").ready(function() {
 	$(".intro_bg").click(function() {
-	  if ($(this).attr("src") === "img/intro/bg.png")
-		 $(this).attr("src", "img/intro/bg2.png");
-	  else if ($(this).attr("src") === "img/intro/bg2.png")
-		 $(this).attr("src", "img/intro/bg.png");
+	  if ($(this).attr("src") === "img/intro/bg.webp")
+		 $(this).attr("src", "img/intro/bg2.webp");
+	  else if ($(this).attr("src") === "img/intro/bg2.webp")
+		 $(this).attr("src", "img/intro/bg.webp");
 	});
  });
 
