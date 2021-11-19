@@ -7,11 +7,11 @@
 .partners__container {
    padding: 0px 57px;
 
-   @media (max-width:$md2+px) {
+   @media (max-width:($md2+px)) {
       padding: 0px 20px;
    }
 
-   @media (max-width:$md4+px) {
+   @media (max-width:($md4+px)) {
       padding: 0px;
    }
 }
@@ -36,19 +36,18 @@
    grid-column-gap: 45px;
    align-items: center;
 
-   @media (max-width:$md1 +px) {
+   @media (max-width:($md1 +px)) {
       grid-template-columns: 1fr 1fr;
    }
 
-   @media (max-width:$md3 +px) {
+   @media (max-width:($md3 +px)) {
       grid-template-columns: 1fr;
    }
 }
 
 ._block__item {
 
-   @media (max-width:$md2 +px) {
+   @media (max-width:($md2 +px)) {
       text-align: center;
    }
-
 }

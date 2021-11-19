@@ -1,10 +1,8 @@
 .title {
-   background-image: url('../img/intro/Rectangle.png');
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
+   background-image: url('../img/intro/Rectangle.webp');
+   @include background-image;
 
-   @media (max-width: $md2+px) {
+   @media (max-width: ($md2+px)) {
       background-image: none;
       background: rgba(252, 208, 186, 1);
    }
@@ -13,19 +11,16 @@
 .header {
    padding: 22px 0px 114px 0px;
 
-
    @media (max-width: 1080px) {
       padding: 22px 0px 40px 0px;
    }
 }
 
-
 .header__container {
-   max-width: 1189px;
-   margin: 0 auto;
    padding: 0px 24px 0px 33px;
-   display: flex;
-   justify-content: space-between;
+   margin: 0 auto;
+   max-width: 1189px;
+   @include center-between;
 
    @media (min-width: 1441px) {
       max-width: 1489px;
@@ -37,25 +32,24 @@
 }
 
 .header__list {
-   display: flex;
-   align-items: center;
+   @include center;
 
-   @media (max-width: 600 + px) {
+   @media (max-width: 600px) {
       display: none;
    }
 
-   ul {
+   .header-list {
       margin-right: 18px;
       display: flex;
 
-      li {
+      .header-list__item {
          margin-right: 53px;
 
          &:last-child {
             margin-right: 0px;
          }
 
-         a {
+         .header-list__link {
             padding: 5px;
             display: block;
             @include adaptive-font (16, 16);
@@ -73,7 +67,7 @@
 
 .header__form {
 
-   @media (max-width: $md2+px) {
+   @media (max-width: ($md2+px)) {
       display: none;
    }
 
@@ -91,29 +85,29 @@
          box-shadow: 0px 0px 30px $blackColor;
       }
    }
+}
 
-   .butt {
-      padding: 18px 18px 18px 18px;
-      position: relative;
-      left: -5px;
-      @include adaptive-font (16, 16);
-      line-height: calc(24 / 16);
-      letter-spacing: 0.5px;
-      background-color: $blackColor;
-      color: $whiteColor;
-      border-radius: 0px 50px 50px 0px;
-      transition: all 0.3s ease;
+.butt {
+   padding: 18px 18px 18px 18px;
+   position: relative;
+   left: -5px;
+   @include adaptive-font (16, 16);
+   line-height: calc(24 / 16);
+   letter-spacing: 0.5px;
+   background-color: $blackColor;
+   color: $whiteColor;
+   border-radius: 0px 50px 50px 0px;
+   transition: all 0.3s ease;
 
-      &:hover {
-         box-shadow: 0px 0px 30px $blackColor;
-      }
+   &:hover {
+      box-shadow: 0px 0px 30px $blackColor;
    }
 }
 
 .mob_button {
    display: none;
 
-   @media (max-width: $md2+px) {
+   @media (max-width: ($md2+px)) {
       display: block;
 
       button {
@@ -130,7 +124,7 @@
       }
    }
 
-   @media (max-width: 600 + px) {
+   @media (max-width: 600px) {
       display: none;
    }
 }

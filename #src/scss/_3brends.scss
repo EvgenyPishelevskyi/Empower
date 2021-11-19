@@ -8,32 +8,27 @@
    padding: 0px 80px 0px 99px;
    display: flex;
 
-   @media (min-width: 1440px){
-     display: block;
+   @media (min-width: 1440px) {
+      display: block;
    }
 
-   @media (max-width: $md2 + px) {
+   @media (max-width: ($md2 + px)) {
       padding: 0px 20px;
    }
 }
 
 .brends__items {
-   display: flex;
+   @include center;
    flex-wrap: wrap;
-   justify-content: center;
 }
 
 ._brend__item {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-right: 46px;
-   margin-bottom: 30px;
+   margin: 0px 46px 30px 0px;
+   @include center;
 
    @media (max-width: 546px) {
       margin-right: 10px;
    }
-
 
    &:last-child {
       margin-right: 0px;
@@ -44,22 +39,19 @@
    }
 }
 
-
 ._item__title {
-   display: flex;
-   flex-direction: column;
    margin-right: 8px;
-   text-align: center;
+   @include column-center;
 
-   span {
+   .item-title__name {
       font-size: 12px;
       line-height: 18px;
-      letter-spacing: 1.9299999475479126px;
+      letter-spacing: 1.9px;
       text-align: center;
       text-transform: uppercase;
    }
 
-   p {
+   .item-title__descr {
       font-size: 12px;
       line-height: 18px;
    }

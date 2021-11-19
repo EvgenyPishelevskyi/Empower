@@ -7,10 +7,9 @@
    padding: 0px 54px;
    text-align: center;
 
-   @media (max-width: $md2+ px) {
+   @media (max-width: ($md2+ px)) {
       padding: 0px 16px;
    }
-
 }
 
 .download__title {
@@ -38,31 +37,8 @@
          box-shadow: 0px 0px 30px $blackColor;
       }
 
-      @media (max-width: $md2+ px) {
+      @media (max-width: ($md2+ px)) {
          padding: 18px 6px 18px 10px;
-      }
-   }
-
-   .butt {
-      padding: 18px 18px 18px 18px;
-      position: relative;
-      left: -5px;
-      @include adaptive-font (16, 16);
-      line-height: calc(24 / 16);
-      letter-spacing: 0.5px;
-      background-color: $blackColor;
-      color: $whiteColor;
-      border-radius: 0px 50px 50px 0px;
-      transition: all 0.3s ease;
-
-
-      &:hover {
-         box-shadow: 0px 0px 30px $blackColor;
-      }
-
-
-      @media (max-width: $md2+ px) {
-         padding: 18px 10px 18px 10px;
       }
    }
 }

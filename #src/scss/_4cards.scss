@@ -1,11 +1,11 @@
 .cards {
    padding: 79px 0px 100px 0px;
 
-   @media (max-width: $md2 + px) {
+   @media (max-width: ($md2 + px)) {
       padding: 20px 0px 100px 0px;
    }
 
-   @media (max-width: $md3+ px) {
+   @media (max-width: ($md3+ px)) {
       padding: 20px 0px 50px 0px;
    }
 }
@@ -13,11 +13,7 @@
 .cards__container {
    padding: 0px 34px;
 
-   // @media (max-width: 1440px){
-   //    max-width: 1489px;
-   // }
-
-   @media (max-width: $md2 + px) {
+   @media (max-width: ($md2 + px)) {
       padding: 0px 20px;
    }
 }
@@ -40,7 +36,7 @@
    grid-template-columns: 1fr 1fr;
    gap: 19px;
 
-   @media (max-width: $md2 + px) {
+   @media (max-width: ($md2 + px)) {
       display: flex;
       flex-direction: column;
    }
@@ -48,57 +44,26 @@
 
 ._item__card {
    margin: 10px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
    min-height: 600px;
+   @include column-between;
+   @include background-image;
 
-
-   @media (max-width: $md2 + px) {
+   @media (max-width: ($md2 + px)) {
       margin: 0px;
       min-height: 400px;
       width: 100%;
       border-radius: 12px;
    }
 
-   @media (max-width: $md4 + px) {
+   @media (max-width: ($md4 + px)) {
       margin: 0px;
    }
 
-   .title_cardss {
-      width: 50%;
-
-      @media (max-width: $md2 + px) {
-         width: 100%;
-         margin: 0 auto;
-      }
-   }
-
-   h2 {
-      width: 87%;
-      padding: 42px 0px 0px 41px;
-      @include adaptive-font (55, 16);
-      line-height: calc(66 / 55);
-      font-weight: 700;
-
-      @media (max-width: $md2 + px) {
-         padding: 42px 0px 0px 0px;
-         width: 100%;
-         margin: 0 auto;
-         text-align: center;
-      }
-   }
-
-   button {
-      display: inline-block;
-      margin-left: 39px;
-      margin-bottom: 59px;
+   .read {
+      margin: 0px 0px 59px 39px;
       padding: 20px 42px;
+      display: inline-block;
       @include adaptive-font (16, 16);
-      line-height: calc(16 / 20);
       line-height: calc(16 / 20);
       font-weight: 700;
       letter-spacing: 0.5px;
@@ -115,7 +80,7 @@
          border: 1px solid $blackColor;
       }
 
-      @media (max-width: $md2 + px) {
+      @media (max-width: ($md2 + px)) {
          padding: 20px 22px;
       }
    }
@@ -127,34 +92,30 @@
 }
 
 ._card1 {
-
-   background-image: url('../img/cards/1.png');
+   background-image: url('../img/cards/1.webp');
 }
 
 ._card2 {
-   background-image: url('../img/cards/2.png');
+   background-image: url('../img/cards/2.webp');
 }
 
 ._card3 {
-   background-image: url('../img/cards/3.png');
+   background-image: url('../img/cards/3.webp');
 }
 
 ._card4 {
-   background-image: url('../img/cards/4.png');
+   background-image: url('../img/cards/4.webp');
 }
 
 ._card5 {
-   background-image: url('../img/cards/5.png');
+   background-image: url('../img/cards/5.webp');
 }
 
 .flip-card {
    perspective: 1000px;
 }
 
-
-
 .flip-card-inner {
-   // width: 100%;
    height: 100%;
    position: relative;
    transition: all 0.3s ease;
@@ -173,13 +134,9 @@
 
 .flip-card-front {
    margin: 10px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   background-repeat: no-repeat;
-   background-position: 50% 50%;
-   background-size: cover;
    min-height: 600px;
+   @include column-between;
+   @include background-image;
    transition: all 0.3s ease;
 
    &:hover {
@@ -187,11 +144,26 @@
       box-shadow: 0 0 30px $blackColor;
    }
 
-   @media (max-width: $md2 + px) {
+   @media (max-width: ($md2 + px)) {
       margin: 0px;
       min-height: 400px;
       width: 100%;
       border-radius: 12px;
+   }
+
+   .flip-card-front__title {
+      padding: 42px 0px 0px 41px;
+      width: 87%;
+      @include adaptive-font (55, 16);
+      line-height: calc(66 / 55);
+      font-weight: 700;
+
+      @media (max-width:($md2 + px)) {
+         padding: 42px 0px 0px 0px;
+         margin: 0 auto;
+         width: 100%;
+         text-align: center;
+      }
    }
 }
 
@@ -200,41 +172,37 @@
 }
 
 .flip-card-back {
+   margin: 10px;
    background-color: #FCD0BA;
+   min-height: 600px;
    ;
    color: $blackColor;
    transform: rotateY(180deg);
-   margin: 10px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
-   min-height: 600px;
+   @include column-between;
+   @include background-image;
 
 
-   @media (max-width: $md2 + px) {
+   @media (max-width: ($md2 + px)) {
       margin: 0px;
       min-height: 400px;
       width: 100%;
       border-radius: 12px;
    }
 
-   h2 {
-      width: 100%;
+   .flip-card-back__title {
       padding: 10px 0px 0px 0px;
+      width: 100%;
       @include adaptive-font (55, 16);
       line-height: calc(66 / 55);
       font-weight: 700;
       text-align: center;
    }
 
-   p {
+   .flip-card-back__descr {
       padding: 0px 0px 15px 0px;
+      margin: 0 auto;
       width: 80%;
       display: block;
-      margin: 0 auto;
       @include adaptive-font (20, 16);
       line-height: calc(35 / 20);
       color: $blackColor;
